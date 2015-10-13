@@ -5,9 +5,13 @@ git config  [--local|--global]  pkey.skey value 修改配置
 git add [file|.] 把文件加到缓存区
 git reset HADE [file|.]  在暂存区中移除该文件
 git rm -cached file 取消跟踪该文件，但是还保留在项目里
-git rm file 删除该文件
+git rm file 删除该文件，并且把本次修改添加到缓存区，如果是手动删除文件，不会需要手动把修改添加到缓存区
 git checkout -- [file|.] 
 恢复文件到最近一次提交状态（未提交过的文件没有改命令），如果文件已经在缓冲区了，需要先调用git reset head 从缓存区移除再git checkout回退文件
 git commit -m ''  把暂存区的文件提交到本地仓库
+
+git mv filea fileb  移动文件，如果在移动到同一个目录则认为是重命名功能。在git中都会认为是一个rename操作，该命令会直接把rename操作添加到缓存区。如果手动修改文件名则认为是删除一个文件和添加一个文件的组合操作，需要手动把修改添加到缓存区。
+
+
 
 
