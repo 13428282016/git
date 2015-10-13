@@ -34,7 +34,7 @@ $ git push origin v1.5，如果想要一次性推送很多标签，也可以使�
 
 push 失败
 A和B同时pull下版本v1，如果B进行了一次push，那么A需要先pull下来才可以push
-
+倒萨大
 
 
 
