@@ -1,6 +1,0 @@
-git init 初始化新仓库
-git clone url   克隆仓库
-git config --list [--local|--global] 查看配置 配置文件在当前目录 .git/.config (--local)还有 用户家目录下的.gitconfig(--global)
-git config  [--local|--global]  pkey.skey value 修改配置
-git add [file|.] 跟踪文件
-git reset HADE [file|.] 取消跟踪文件
