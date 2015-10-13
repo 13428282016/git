@@ -39,3 +39,7 @@ A和B同时pull下版本v1，如果B进行了一次push，那么A需要先pull�
 
 
 
+git branch 查看分支
+git branch branchname 创建分支
+git log --decorate 可以查看
+git checkout branchname切换分支 
