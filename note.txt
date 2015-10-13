@@ -7,7 +7,7 @@ git reset HADE [file|.]  在暂存区中移除该文件
 git rm -cached file 取消跟踪该文件，但是还保留在项目里
 git rm file 删除该文件
 git checkout -- [file|.] 
-恢复文件到最近一次提交状态（未提交过的文件没有改命令）
+恢复文件到最近一次提交状态（未提交过的文件没有改命令），如果文件已经在缓冲区了，需要先调用git reset head 从缓存区移除再git checkout回退文件
 git commit -m ''  把暂存区的文件提交到本地仓库
 
 
