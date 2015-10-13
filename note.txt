@@ -3,6 +3,14 @@ git clone url   克隆仓库
 git config --list [--local|--global] 查看配置 配置文件在当前目录 .git/.config (--local)还有 用户家目录下的.gitconfig(--global)
 git config  [--local|--global]  pkey.skey value 修改配置
 git config --global alias.unstage 'reset HEAD --'  git命令的别名
+
+
+git config --global credential.helper cache 设置记住密码（默认15分钟）：
+
+
+git config credential.helper 'cache --timeout=3600' 如果想自己设置时间，可以这样做：这样就设置一个小时之后失效
+git config --global credential.helper store 长期存储密码：
+
 git add [file|.] 把文件加到缓存区
 git reset HADE [file|.]  在暂存区中移除该文件
 git rm -cached file 取消跟踪该文件，但是还保留在项目里
