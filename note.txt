@@ -2,11 +2,12 @@ git init 初始化新仓库
 git clone url   克隆仓库
 git config --list [--local|--global] 查看配置 配置文件在当前目录 .git/.config (--local)还有 用户家目录下的.gitconfig(--global)
 git config  [--local|--global]  pkey.skey value 修改配置
-git add [file|.] 跟踪文件
+git add [file|.] 把文件加到缓存区
 git reset HADE [file|.]  在暂存区中移除该文件
 git rm -cached file 取消跟踪该文件，但是还保留在项目里
 git rm file 删除该文件
 git checkout -- [file|.] 
 恢复文件到最近一次提交状态（未提交过的文件没有改命令）
 git commit -m ''  把暂存区的文件提交到本地仓库
+
 
