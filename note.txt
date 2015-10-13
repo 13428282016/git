@@ -2,15 +2,27 @@ git init 初始化新仓库
 git clone url   克隆仓库
 git config --list [--local|--global] 查看配置 配置文件在当前目录 .git/.config (--local)还有 用户家目录下的.gitconfig(--global)
 git config  [--local|--global]  pkey.skey value 修改配置
+git config --global alias.unstage 'reset HEAD --'  git命令的别名
 git add [file|.] 把文件加到缓存区
 git reset HADE [file|.]  在暂存区中移除该文件
 git rm -cached file 取消跟踪该文件，但是还保留在项目里
 git rm file 删除该文件，并且把本次修改添加到缓存区，如果是手动删除文件，不会需要手动把修改添加到缓存区
 git checkout -- [file|.] 
 恢复文件到最近一次提交状态（未提交过的文件没有改命令），如果文件已经在缓冲区了，需要先调用git reset head 从缓存区移除再git checkout回退文件
-git commit -m ''  把暂存区的文件提交到本地仓库
-
+git commit [-a --amend] -m  ''  把暂存区的文件提交到本地仓库 ,-a是指直接跳过缓存区，把已跟踪但是未缓存的文件也提交上去，--amend 修订上一次提交，使用--amend参数的提交将会与本次提交和最近一次提交的内容合并为一次提交
 git mv filea fileb  移动文件，如果在移动到同一个目录则认为是重命名功能。在git中都会认为是一个rename操作，该命令会直接把rename操作添加到缓存区。如果手动修改文件名则认为是删除一个文件和添加一个文件的组合操作，需要手动把修改添加到缓存区。
+git log  查看提交历史记录
+git diff 查看文件差异
+git tag 查看标签
+git tag tagname -m ‘’ 添加便签，-m 为这次标签的注释
+git tag  -a  tagname 9fceb02（每次提交的id） 在某次提交状态追加一个标签
+git checkout  -b [branchname] [tagname] 切换到某个便签的当时一样的git仓库
+git show tagname   查看该标签对应的某次提交
+默认情况下，git push 命令并不会传送标签到远程仓库服务器上。 在创建完标签后你必须显式地推送标签到共享服务器上。 这个过程就像共享远程分支一样 - 你可以运行 git push origin [tagname]。
+$ git push origin v1.5，如果想要一次性推送很多标签，也可以使用带有 --tags 选项的 git push 命令。 这将会把所有不在远程仓库服务器上的标签全部传送到那里。
+
+
+
 
 
 
